@@ -46,6 +46,7 @@ export const Name = styled.Text`
     color: #FFF;
     margin-left: 5%;
     margin-top: 23%;
+    text-transform: uppercase;
 `;
 
 export const Yellow0 = styled.View`
@@ -115,7 +116,8 @@ export const BioText = styled.Text`
 export const BioSpam = styled.Text`
     font-size: 22px;
     color: #FFF;
-    margin-left: 7%;
+    padding-left: 7%;
+    padding-right:2%;
 `;
 
 export const Yellow = styled.View`
@@ -134,6 +136,7 @@ export const Photo = styled.Image`
     align-self: center;
     bottom: 76%;
     border-radius: 500px;
-    border: 3px white solid;
+    border-width: 3px;
+    border-color: white;
     z-index: 1
 `;

@@ -27,3 +27,9 @@ export const ArrowIcon = styled(AntDesign)`
     align-self: center;
     left: 2%;
 `;
+
+export const List = styled.FlatList.attrs({
+    showsVerticalScrollIndicator: false,     // não mostrar inicador de scrool
+    contentContainerStyle: { flexGrow: 1 }, // estilo relacionado apenas ao conteúdo da lista
+})`
+  `;

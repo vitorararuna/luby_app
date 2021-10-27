@@ -1,20 +1,20 @@
 import React from "react";
 import { Container, RepoInfo, RepoName, Yellow, Footer, Box, StarIcon, StarInfo, LockIcon } from './styles'
 
-export default function Repositorio({ navigation }) {
+export default function Repositorio({ name, description, url, stars }) {
     return (
         <Container>
             <Box>
                 <Yellow />
-                <RepoName>Repositório-X-React-Native</RepoName>
+                <RepoName>{name}</RepoName>
             </Box>
             <RepoInfo>
-                Repository for centralization of the BrasiliApp mobile project
+                {description ? description : "Repo Sem Descrição"}
             </RepoInfo>
             <Footer>
                 <Box>
                     <StarIcon name="star" color="#FFCE00" size={25} />
-                    <StarInfo>32</StarInfo>
+                    <StarInfo>{stars}</StarInfo>
                 </Box>
                 <Box>
                     <LockIcon name="unlock" color="#63BF1F" size={25} />

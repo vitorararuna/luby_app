@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Feather, AntDesign} from '@expo/vector-icons';
+import { Feather, AntDesign } from '@expo/vector-icons';
 
 export const Container = styled.View`
     flex: 1;
@@ -23,6 +23,7 @@ export const ArrowIcon = styled(AntDesign)`
 export const UserName = styled.Text`
     font-size: 22px;
     color: #fff;
+    margin-left: 50px;
 `;
 
 export const Logout = styled.Text`
@@ -138,6 +139,7 @@ export const Photo = styled.Image`
     align-self: center;
     bottom: 76%;
     border-radius: 500px;
-    border: 3px white solid;
+    border-width: 3px;
+    border-color: white;
     z-index: 1
 `;

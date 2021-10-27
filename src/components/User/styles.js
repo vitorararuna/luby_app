@@ -23,7 +23,8 @@ export const Photo = styled.Image`
     width: 75px;
     height: 75px;
     border-radius: 500px;
-    border: 3px white solid;
+    border-width: 3px;
+    border-color: white;
     margin-left: 25px;
 `;
 

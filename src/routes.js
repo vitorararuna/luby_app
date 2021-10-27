@@ -1,8 +1,6 @@
 import React from "react";
 
 import { Feather } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -13,9 +11,9 @@ import UserInfos_ from "./pages/UserInfos";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useUser } from "./provders/user";
 
 const Stack = createNativeStackNavigator();
-
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -74,12 +72,20 @@ const TabNavigator = () => {
     )
 }
 
+
 const Routes = () => {
+    const { user } = useUser();
     return (
-        <Stack.Navigator initialRouteName='Login'>
-            <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
-            <Stack.Screen options={{ headerShown: false }} name="Tabs" component={TabNavigator} />
-            <Stack.Screen options={{ headerShown: false }} name="UserInfos" component={UserInfos_} />
+        <Stack.Navigator>
+            {user.signed
+                ?
+                <>
+                    <Stack.Screen options={{ headerShown: false }} name="Tabs" component={TabNavigator} />
+                    <Stack.Screen options={{ headerShown: false }} name="UserInfos" component={UserInfos_} />
+                </>
+                :
+                <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
+            }
         </Stack.Navigator>
     )
 }
