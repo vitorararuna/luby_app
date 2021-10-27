@@ -50,3 +50,22 @@ export const Enter = styled.Text`
     /* text-align: center; */
 `;
 
+
+export const Campo = styled.Text`
+    /* position: "relative",
+    top: -35,
+    right: 10,
+    width: "100%",
+    textAlign: "right",
+    color: "#f00",
+    zIndex: 2, */
+    position: absolute;
+    color: #f00;
+    width: 100%;
+    text-align: right;
+    right: 10%;
+    bottom: 32%;
+    font-size: 16px;
+    z-index: 2
+`;
+
